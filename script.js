@@ -1,12 +1,3 @@
-// ── Mobile video swap ──
-(function() {
-  var v = document.getElementById('heroVideo');
-  if (v && window.innerWidth <= 1024) {
-    v.querySelector('source').src = 'house1_mobile.mp4';
-    v.load();
-  }
-})();
-
 // ── Force scroll to top on load ──
 history.scrollRestoration = 'manual';
 window.scrollTo(0, 0);
