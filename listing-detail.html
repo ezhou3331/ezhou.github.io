@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Listing · Elaine Zhou PREC*</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="listings.css" />
+  <link rel="stylesheet" href="listing-detail.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body class="listings-page detail-page">
+
+  <!-- NAVBAR -->
+  <nav class="navbar solid" id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <svg class="logo-svg ez-badge" viewBox="0 0 220 175" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="220" height="175" fill="#231f1a"/>
+          <rect x="8" y="8" width="204" height="159" stroke="#6b5f54" stroke-width="0.8" fill="none"/>
+          <line x1="72" y1="42" x2="72"  y2="112" stroke="white" stroke-width="1.4"/>
+          <line x1="72" y1="42" x2="112" y2="42"  stroke="white" stroke-width="1.4"/>
+          <line x1="72" y1="77" x2="107" y2="77"  stroke="white" stroke-width="1.4"/>
+          <line x1="72" y1="112" x2="112" y2="112" stroke="white" stroke-width="1.4"/>
+          <line x1="97"  y1="42" x2="152" y2="42"  stroke="white" stroke-width="1.4"/>
+          <line x1="152" y1="42" x2="92"  y2="112" stroke="white" stroke-width="1.4"/>
+          <line x1="88"  y1="112" x2="152" y2="112" stroke="white" stroke-width="1.4"/>
+          <line x1="44" y1="130" x2="176" y2="130" stroke="#6b5f54" stroke-width="0.8"/>
+          <text x="110" y="150" text-anchor="middle" font-family="'Playfair Display', Georgia, serif" font-size="10" letter-spacing="4" fill="white">ELAINE ZHOU PREC*</text>
+        </svg>
+      </a>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html">HOME</a></li>
+        <li class="has-drop">
+          <a href="listings.html">LISTINGS <i class="fa-solid fa-chevron-down"></i></a>
+          <ul class="drop">
+            <li><a href="listings.html">Active Luxury Listings</a></li>
+            <li><a href="index.html#sold">Sold Luxury Listings</a></li>
+          </ul>
+        </li>
+        <li><a href="index.html#contact">CONTACT</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="lang-toggle" id="langToggle">中文</button>
+        <button class="burger" id="burger" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- CONTENT (populated by JS) -->
+  <div id="detailContent"></div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <a href="index.html" class="nav-logo footer-logo-link">
+        <svg class="logo-svg ez-badge" viewBox="0 0 220 175" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="220" height="175" fill="#231f1a"/>
+          <rect x="8" y="8" width="204" height="159" stroke="#6b5f54" stroke-width="0.8" fill="none"/>
+          <line x1="72" y1="42" x2="72"  y2="112" stroke="white" stroke-width="1.4"/>
+          <line x1="72" y1="42" x2="112" y2="42"  stroke="white" stroke-width="1.4"/>
+          <line x1="72" y1="77" x2="107" y2="77"  stroke="white" stroke-width="1.4"/>
+          <line x1="72" y1="112" x2="112" y2="112" stroke="white" stroke-width="1.4"/>
+          <line x1="97"  y1="42" x2="152" y2="42"  stroke="white" stroke-width="1.4"/>
+          <line x1="152" y1="42" x2="92"  y2="112" stroke="white" stroke-width="1.4"/>
+          <line x1="88"  y1="112" x2="152" y2="112" stroke="white" stroke-width="1.4"/>
+          <line x1="44" y1="130" x2="176" y2="130" stroke="#6b5f54" stroke-width="0.8"/>
+          <text x="110" y="150" text-anchor="middle" font-family="'Playfair Display', Georgia, serif" font-size="10" letter-spacing="4" fill="white">ELAINE ZHOU PREC*</text>
+        </svg>
+      </a>
+      <ul class="footer-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#about">About Me</a></li>
+        <li><a href="listings.html">Active Luxury Listings</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" aria-label="WeChat"><i class="fab fa-weixin"></i></a>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2026 Elaine Zhou PREC* &nbsp;·&nbsp; All Rights Reserved</p>
+        <p class="footer-disclaimer">The trademarks MLS®, Multiple Listing Service® and associated logos are owned by The Canadian Real Estate Association (CREA).</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="listings-data.js"></script>
+  <script src="script.js"></script>
+  <script>
+  const params = new URLSearchParams(window.location.search);
+  const id = parseInt(params.get('id'));
+  const listing = LISTINGS.find(l => l.id === id);
+
+  if (!listing) {
+    document.getElementById('detailContent').innerHTML = `
+      <div style="padding:120px 80px;text-align:center;">
+        <p style="font-size:18px;color:var(--mid);">Listing not found. <a href="listings.html" style="color:var(--brown);">Back to listings</a></p>
+      </div>`;
+  } else {
+    document.title = `${listing.address} · Elaine Zhou PREC*`;
+
+    const placeholderColors = ['#2c2825','#3a3330','#1c1a17','#2a2420','#35302b','#1e1b18','#312c28','#262220','#3d3832','#232018'];
+
+    const heroImg = listing.img
+      ? `<img src="${listing.img}" alt="${listing.address}" class="detail-hero-img" />`
+      : `<div class="detail-hero-img detail-hero-placeholder" style="background:${placeholderColors[listing.id % placeholderColors.length]};"><span>${listing.address}</span></div>`;
+
+    // Thumbnails — reuse same image for all thumbs if available, else color blocks
+    const thumbs = Array.from({length: 6}, (_, i) => {
+      if (listing.img) return `<div class="thumb ${i===0?'active':''}" onclick="selectThumb(this, '${listing.img}')"><img src="${listing.img}" alt="Photo ${i+1}" /></div>`;
+      const col = placeholderColors[(listing.id + i) % placeholderColors.length];
+      return `<div class="thumb ${i===0?'active':''}" onclick="selectThumb(this)"><div style="width:100%;height:100%;background:${col};"></div></div>`;
+    }).join('');
+
+    document.getElementById('detailContent').innerHTML = `
+      <!-- Back breadcrumb -->
+      <div class="detail-breadcrumb">
+        <a href="listings.html"><i class="fa-solid fa-chevron-left"></i> Back to Listings</a>
+      </div>
+
+      <!-- Hero image -->
+      <div class="detail-hero" id="detailHero">
+        ${heroImg}
+        ${listing.tags.length ? `<div class="detail-tags">${listing.tags.map(t=>`<span class="lcard-tag">${t}</span>`).join('')}</div>` : ''}
+      </div>
+
+      <!-- Thumbnail strip -->
+      <div class="detail-thumbs-wrap">
+        <button class="thumb-arrow left" onclick="scrollThumbs(-1)"><i class="fa-solid fa-chevron-left"></i></button>
+        <div class="detail-thumbs" id="thumbStrip">${thumbs}</div>
+        <button class="thumb-arrow right" onclick="scrollThumbs(1)"><i class="fa-solid fa-chevron-right"></i></button>
+      </div>
+
+      <!-- Address + Price -->
+      <div class="detail-identity">
+        <p class="detail-address">${listing.address}</p>
+        <p class="detail-area">${listing.area}</p>
+        <p class="detail-price">${listing.price}</p>
+      </div>
+
+      <!-- Quick stats bar -->
+      <div class="detail-stats-bar">
+        <div class="detail-stat">
+          <i class="fa-solid fa-bed"></i>
+          <span>Bedrooms: <strong>${listing.beds}</strong></span>
+        </div>
+        <div class="detail-stat">
+          <i class="fa-solid fa-shower"></i>
+          <span>Bathrooms: <strong>${listing.baths}</strong></span>
+        </div>
+        <div class="detail-stat">
+          <i class="fa-solid fa-ruler-combined"></i>
+          <span>Living Area: <strong>${listing.sqft.toLocaleString()} sqft</strong></span>
+        </div>
+        <div class="detail-stat">
+          <i class="fa-solid fa-dollar-sign"></i>
+          <span>Price Per Sqft: <strong>${listing.pricePerSqft}</strong></span>
+        </div>
+      </div>
+
+      <!-- Description + Specs -->
+      <div class="detail-body">
+        <div class="detail-description">
+          <h2 class="detail-section-title">${listing.tags[0] || 'Property'} Overview</h2>
+          <p>${listing.description}</p>
+          <div class="detail-contact-cta">
+            <p>Interested in this property?</p>
+            <a href="index.html#contact" class="detail-cta-btn">CONTACT ELAINE</a>
+            <a href="tel:7788343331" class="detail-cta-phone">778.834.3331</a>
+          </div>
+        </div>
+
+        <div class="detail-specs">
+          <h2 class="detail-section-title">Property Details</h2>
+          <table class="specs-table">
+            <tr><td class="spec-label">MLS®</td><td>${listing.mls}</td></tr>
+            <tr><td class="spec-label">Type</td><td>${listing.type}</td></tr>
+            <tr><td class="spec-label">Bedrooms</td><td>${listing.beds}</td></tr>
+            <tr><td class="spec-label">Bathrooms</td><td>${listing.baths}</td></tr>
+            <tr><td class="spec-label">Square Feet</td><td>${listing.sqft.toLocaleString()} sqft</td></tr>
+            <tr><td class="spec-label">Lot Size</td><td>${listing.lotSize}</td></tr>
+            <tr><td class="spec-label">Frontage</td><td>${listing.frontage}</td></tr>
+            <tr><td class="spec-label">Full Baths</td><td>${listing.fullBaths}</td></tr>
+            <tr><td class="spec-label">Half Baths</td><td>${listing.halfBaths}</td></tr>
+            <tr><td class="spec-label">Taxes</td><td>${listing.taxes}</td></tr>
+            <tr><td class="spec-label">Parking</td><td>${listing.parking}</td></tr>
+            <tr><td class="spec-label">View</td><td>${listing.view}</td></tr>
+            <tr><td class="spec-label">Basement</td><td>${listing.basement}</td></tr>
+            <tr><td class="spec-label">Storeys</td><td>${listing.storeys}</td></tr>
+            <tr><td class="spec-label">Year Built</td><td>${listing.yearBuilt}</td></tr>
+            <tr><td class="spec-label">Style</td><td>${listing.style}</td></tr>
+          </table>
+        </div>
+      </div>
+    `;
+  }
+
+  function selectThumb(el, src) {
+    document.querySelectorAll('.thumb').forEach(t => t.classList.remove('active'));
+    el.classList.add('active');
+    if (src) {
+      const hero = document.getElementById('detailHero');
+      const img = hero.querySelector('img');
+      if (img) img.src = src;
+    }
+  }
+
+  function scrollThumbs(dir) {
+    const strip = document.getElementById('thumbStrip');
+    if (strip) strip.scrollBy({ left: dir * 200, behavior: 'smooth' });
+  }
+  </script>
+</body>
+</html>

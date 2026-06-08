@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elaine Zhou PREC*</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════
+       NAVBAR
+  ════════════════════════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+
+      <a href="#home" class="nav-logo">
+        <svg class="logo-svg ez-badge" viewBox="0 0 220 175" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Background -->
+          <rect width="220" height="175" fill="#231f1a"/>
+          <!-- Inset border -->
+          <rect x="8" y="8" width="204" height="159" stroke="#6b5f54" stroke-width="0.8" fill="none"/>
+          <!-- E — left vertical + 3 horizontals -->
+          <line x1="72" y1="42" x2="72"  y2="112" stroke="white" stroke-width="1.4"/>
+          <line x1="72" y1="42" x2="112" y2="42"  stroke="white" stroke-width="1.4"/>
+          <line x1="72" y1="77" x2="107" y2="77"  stroke="white" stroke-width="1.4"/>
+          <line x1="72" y1="112" x2="112" y2="112" stroke="white" stroke-width="1.4"/>
+          <!-- Z — top bar (angled), diagonal, bottom bar -->
+          <line x1="97"  y1="42" x2="152" y2="42"  stroke="white" stroke-width="1.4"/>
+          <line x1="152" y1="42" x2="92"  y2="112" stroke="white" stroke-width="1.4"/>
+          <line x1="88"  y1="112" x2="152" y2="112" stroke="white" stroke-width="1.4"/>
+          <!-- Divider -->
+          <line x1="44" y1="130" x2="176" y2="130" stroke="#6b5f54" stroke-width="0.8"/>
+          <!-- Name -->
+          <text x="110" y="150" text-anchor="middle" font-family="'Playfair Display', Georgia, serif" font-size="10" letter-spacing="4" fill="white">ELAINE ZHOU PREC*</text>
+        </svg>
+      </a>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#home" data-i18n="nav-home">HOME</a></li>
+        <li class="has-drop">
+          <a href="listings.html"><span data-i18n="nav-listings">LISTINGS</span> <i class="fa-solid fa-chevron-down"></i></a>
+          <ul class="drop">
+            <li><a href="listings.html" data-i18n="nav-listings-active">Active Luxury Listings</a></li>
+            <li><a href="sold.html" data-i18n="nav-listings-sold">Sold Luxury Listings</a></li>
+          </ul>
+        </li>
+        <li><a href="#contact" data-i18n="nav-contact">CONTACT</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="lang-toggle" id="langToggle">中文</button>
+        <button class="burger" id="burger" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════
+       HERO — full-viewport mansion photo
+  ════════════════════════════════ -->
+  <section class="hero" id="home">
+    <video class="hero-video" autoplay muted loop playsinline>
+      <source src="house1_compressed.mp4" type="video/mp4" />
+    </video>
+
+    <!-- Dark overlay -->
+    <div class="hero-overlay"></div>
+
+    <!-- Circular medallion -->
+    <div class="hero-content">
+      <div class="hero-medallion">
+        <svg class="medallion-ring" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <path id="topArc"    d="M 30,150 A 120,120 0 0,1 270,150" />
+            <path id="bottomArc" d="M 50,175 A 110,110 0 0,0 250,175" />
+          </defs>
+          <circle cx="150" cy="150" r="138" fill="none" stroke="rgba(255,255,255,0.2)"  stroke-width="1"/>
+          <circle cx="150" cy="150" r="128" fill="none" stroke="rgba(255,255,255,0.1)"  stroke-width="0.5"/>
+          <circle cx="150" cy="150" r="108" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="1"/>
+          <text font-family="Montserrat, sans-serif" font-size="13" font-weight="600" letter-spacing="6" fill="rgba(255,255,255,0.85)">
+            <textPath href="#topArc" startOffset="50%" text-anchor="middle">ELAINE ZHOU PREC*</textPath>
+          </text>
+          <circle cx="22"  cy="150" r="2.5" fill="rgba(255,255,255,0.35)"/>
+          <circle cx="278" cy="150" r="2.5" fill="rgba(255,255,255,0.35)"/>
+        </svg>
+        <div class="medallion-center">
+          <span class="med-over" data-i18n="med-over">OVER</span>
+          <span class="med-num">3<span class="med-b">B</span></span>
+          <div class="med-rule"></div>
+          <span class="med-label" data-i18n="med-label">LISTED &amp; SOLD</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════
+       CTA PANEL — split glass layout
+  ════════════════════════════════ -->
+  <section class="cta-panel">
+
+    <!-- Left: sharp photo -->
+    <div class="cta-left">
+      <div class="cta-left-img"></div>
+    </div>
+
+    <!-- Right: frosted glass panel -->
+    <div class="cta-right">
+      <div class="cta-right-bg"></div>
+      <div class="cta-right-overlay"></div>
+      <div class="cta-right-content fade-in-children">
+        <div class="cta-brand">
+          <span class="cta-brand-name" data-i18n="cta-name">ELAINE ZHOU</span>
+          <span class="cta-brand-sub">PREC*</span>
+        </div>
+
+        <h2 class="cta-tagline" data-i18n-html="cta-tagline">Your Real Estate<br><strong>Journey Starts Here</strong></h2>
+
+        <div class="cta-divider"></div>
+
+        <nav class="cta-links">
+          <a href="listings.html"  class="cta-link" data-i18n="cta-link-listings">ACTIVE LUXURY LISTINGS</a>
+          <a href="sold.html"  class="cta-link" data-i18n="cta-link-sold">SOLD LUXURY LISTINGS</a>
+          <a href="#contact"   class="cta-link cta-link-active" data-i18n="cta-link-contact">CONTACT</a>
+          <a href="#about"     class="cta-link" data-i18n="cta-link-about">ABOUT ME</a>
+          <a href="#insights"  class="cta-link" data-i18n="cta-link-insights">REAL ESTATE INSIGHTS</a>
+        </nav>
+
+        <div class="cta-divider"></div>
+
+        <a href="#contact" class="cta-start-btn" data-i18n="cta-btn">Get Started</a>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ═══════════════════════════════
+       ABOUT US — section 01
+  ════════════════════════════════ -->
+  <section class="about" id="about">
+
+    <!-- Background video -->
+    <video class="about-bg-video" autoplay muted loop playsinline>
+      <source src="IMG_compressed.mp4" type="video/mp4">
+    </video>
+    <!-- Dim overlay -->
+    <div class="about-bg-overlay"></div>
+
+    <!-- Section label: sits top-right -->
+    <div class="sec-label-right">
+      <div class="sec-line-h"></div>
+      <span class="sec-num">01</span>
+      <div class="sec-line-v"></div>
+    </div>
+
+    <div class="about-heading-wrap fade-in">
+      <h2 class="about-heading" data-i18n-html="about-heading">ABOUT<br>ME</h2>
+      <!-- decorative ghost shape -->
+      <div class="ghost-shape"></div>
+    </div>
+
+    <div class="about-grid fade-in">
+      <!-- Team photo -->
+      <div class="about-photo-col">
+        <img
+          src="elaine-zhou.jpg"
+          alt="Elaine Zhou PREC* Team"
+          class="about-photo"
+        />
+      </div>
+
+      <!-- Content -->
+      <div class="about-content-col fade-in-children">
+        <h3 class="about-team-name" data-i18n="about-name">ELAINE ZHOU PREC*</h3>
+        <div class="about-banner" data-i18n="about-banner">OVER $3-BILLION LISTED &amp; SOLD</div>
+        <p class="about-para" data-i18n="about-p1">Elaine Zhou is a seasoned real estate professional with over a decade of experience in the real estate industry, complemented by an extensive background in international finance. Her unique combination of financial expertise, global perspective, and deep understanding of real estate markets allows her to provide clients with strategic insights that go far beyond a traditional property transaction.</p>
+        <p class="about-para" data-i18n="about-p2">Having worked with high-net-worth individuals and international investors throughout her career, Elaine has developed a strong network of affluent clients and industry professionals across North America and Asia. Her international outlook, combined with a keen eye for identifying opportunities and emerging market trends, enables her to help clients make informed decisions that align with both their lifestyle and long-term wealth-building objectives.</p>
+        <p class="about-para" data-i18n="about-p3">Specializing in luxury homes, investment properties, and cross-border real estate transactions, Elaine is particularly skilled at serving local and international clients, investors, and families relocating to Canada. She understands the unique financial, cultural, and cross-border considerations involved in real estate transactions and is committed to making every experience seamless, efficient, and successful.</p>
+        <p class="about-para" data-i18n="about-p4">As a Luxury Real Estate Professional and top-performing agent at Macdonald Realty, Elaine is known for her professionalism, strong negotiation skills, attention to detail, and unwavering commitment to client success. She has built an extensive network of trusted mortgage specialists, legal advisors, accountants, home inspectors, contractors, and designers, ensuring her clients have access to the highest level of expertise at every stage of their real estate journey.</p>
+        <p class="about-para" data-i18n="about-p5">Deeply rooted in the South Surrey, White Rock, Vancouver West, W Vancouver, Richmond and Greater Vancouver communities, while maintaining a global perspective, Elaine offers clients the advantage of both local market expertise and international insight. Her integrity, transparency, and results-driven approach have earned her the trust of a loyal clientele, many of whom return for multiple transactions and refer their family, friends, and business associates.</p>
+        <p class="about-para" data-i18n="about-p6">Whether you are buying or selling a home, seeking a strategic investment opportunity, relocating internationally, or building a long-term real estate portfolio, Elaine is dedicated to helping you achieve your goals with confidence, clarity, and exceptional results.</p>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ═══════════════════════════════
+       FEATURED LISTINGS — section 02
+  ════════════════════════════════ -->
+  <section class="listings" id="listings">
+
+    <div class="sec-label-left">
+      <span class="sec-num">02</span>
+      <div class="sec-line-h"></div>
+    </div>
+
+    <h2 class="listings-heading fade-in" data-i18n-html="listings-heading">FEATURED<br>LISTINGS</h2>
+
+    <div class="cards-grid fade-in-children">
+
+      <!-- Card 1 -->
+      <div class="card">
+        <div class="card-img-wrap">
+          <img src="main.jpg" alt="18256 21A Avenue" />
+          <span class="card-badge">ACREAGE</span>
+        </div>
+        <div class="card-price">$8,500,000</div>
+        <div class="card-info">
+          <div class="card-address">18256 21A AVENUE</div>
+          <div class="card-area">Hazelmere, South Surrey White Rock</div>
+          <div class="card-sqft">12,364 sqft</div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card">
+        <div class="card-img-wrap">
+          <img src="13464.jpg" alt="13464 13A Avenue" />
+          <span class="card-badge">WATERFRONT</span>
+        </div>
+        <div class="card-price">$7,580,000</div>
+        <div class="card-info">
+          <div class="card-address">13464 13A AVENUE</div>
+          <div class="card-area">Crescent Bch Ocean Pk., South Surrey White Rock</div>
+          <div class="card-sqft">6,821 sqft</div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card">
+        <div class="card-img-wrap">
+          <img src="2737.jpg" alt="2737 Crescent Drive" />
+        </div>
+        <div class="card-price">$5,150,000</div>
+        <div class="card-info">
+          <div class="card-address">2737 CRESCENT DRIVE</div>
+          <div class="card-area">Crescent Bch Ocean Pk., South Surrey White Rock</div>
+          <div class="card-sqft">8,221 sqft</div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="card">
+        <div class="card-img-wrap">
+          <img src="15730.jpg" alt="15730 38A Avenue" />
+          <span class="card-badge badge-open">Open House Jun 6th, 2–4PM</span>
+        </div>
+        <div class="card-price">$2,699,000</div>
+        <div class="card-info">
+          <div class="card-address">15730 38A AVENUE</div>
+          <div class="card-area">Morgan Creek, South Surrey White Rock</div>
+          <div class="card-sqft">4,600 sqft</div>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="card">
+        <div class="card-img-wrap">
+          <img src="3122.jpg" alt="3122 136 Street" />
+        </div>
+        <div class="card-price">$6,488,888</div>
+        <div class="card-info">
+          <div class="card-address">3122 136 STREET</div>
+          <div class="card-area">Elgin Chantrell, South Surrey White Rock</div>
+          <div class="card-sqft">8,169 sqft</div>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="card">
+        <div class="card-img-wrap">
+          <img src="13169.jpg" alt="13169 Marine Drive" />
+          <span class="card-badge badge-ocean">OCEAN VIEW</span>
+        </div>
+        <div class="card-price">$3,480,000</div>
+        <div class="card-info">
+          <div class="card-address">13169 MARINE DRIVE</div>
+          <div class="card-area">Crescent Bch Ocean Pk., South Surrey White Rock</div>
+          <div class="card-sqft">5,000 sqft</div>
+        </div>
+      </div>
+
+      <!-- Card 7 -->
+      <div class="card">
+        <div class="card-img-wrap">
+          <img src="3472.jpg" alt="3472 164A Street" />
+          <span class="card-badge">MOUNTAIN VIEW</span>
+        </div>
+        <div class="card-price">$4,895,000</div>
+        <div class="card-info">
+          <div class="card-address">3472 164A STREET</div>
+          <div class="card-area">Morgan Creek, South Surrey White Rock</div>
+          <div class="card-sqft">10,367 sqft</div>
+        </div>
+      </div>
+
+      <!-- Card 8 -->
+      <div class="card">
+        <div class="card-img-wrap">
+          <img src="15957.jpg" alt="15957 39A Avenue" />
+          <span class="card-badge">MOUNTAIN VIEW</span>
+        </div>
+        <div class="card-price">$3,650,000</div>
+        <div class="card-info">
+          <div class="card-address">15957 39A AVENUE</div>
+          <div class="card-area">Morgan Creek, South Surrey White Rock</div>
+          <div class="card-sqft">6,640 sqft</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════
+       REAL ESTATE INSIGHTS
+  ════════════════════════════════ -->
+  <section class="insights" id="insights">
+
+    <div class="insights-header fade-in">
+      <h2 class="insights-heading" data-i18n="insights-heading">REAL ESTATE INSIGHTS</h2>
+      <p class="insights-sub" data-i18n="insights-sub">Greater Vancouver &amp; Fraser Valley · Market Data 2025–2026</p>
+    </div>
+
+    <!-- Stat pills -->
+    <div class="stat-pills fade-in-children">
+      <div class="stat-pill">
+        <span class="stat-num">$1.85M</span>
+        <span class="stat-label" data-i18n="stat-label-1">Benchmark — Detached</span>
+      </div>
+      <div class="stat-pill">
+        <span class="stat-num">16,917</span>
+        <span class="stat-label" data-i18n="stat-label-2">Active Listings</span>
+      </div>
+      <div class="stat-pill">
+        <span class="stat-num">13.1%</span>
+        <span class="stat-label" data-i18n="stat-label-3">Sales-to-Active Ratio</span>
+      </div>
+    </div>
+
+    <!-- Charts -->
+    <div class="charts-grid fade-in">
+      <!-- Line chart -->
+      <div class="chart-card">
+        <h3 class="chart-title" data-i18n="chart-title-1">Benchmark Price — Detached Homes</h3>
+        <p class="chart-sub" data-i18n="chart-sub-1">Greater Vancouver · Jan 2025 – May 2026 ($ Millions)</p>
+        <canvas id="lineChart" height="200"></canvas>
+      </div>
+      <!-- Bar chart -->
+      <div class="chart-card">
+        <h3 class="chart-title" data-i18n="chart-title-2">Benchmark Price by Property Type</h3>
+        <p class="chart-sub" data-i18n="chart-sub-2">Greater Vancouver · May 2026 vs May 2025</p>
+        <canvas id="barChart" height="200"></canvas>
+      </div>
+    </div>
+
+    <p class="insights-source">Source: Real Estate Board of Greater Vancouver (REBGV) &nbsp;·&nbsp; May 2026</p>
+
+  </section>
+
+  <!-- ═══════════════════════════════
+       CONTACT
+  ════════════════════════════════ -->
+  <section class="contact" id="contact">
+    <div class="contact-bg"></div>
+    <div class="contact-overlay"></div>
+    <div class="contact-inner fade-in">
+
+      <div class="contact-left">
+        <h2 class="contact-title" data-i18n-html="contact-title">Start Your Real Estate<br>Journey Today.</h2>
+        <p class="contact-body" data-i18n="contact-body">
+          Your real estate journey deserves nothing less than exceptional. With Elaine Zhou PREC* by your side, every step is handled with precision, care, and unwavering dedication. Fill out the form below or call today to begin.
+        </p>
+        <a href="tel:7788343331" class="contact-phone">778.834.3331</a>
+        <span class="contact-phone contact-email-copy" onclick="navigator.clipboard.writeText('ezprec@hotmail.com').then(()=>{this.textContent='Copied!';setTimeout(()=>this.textContent='ezprec@hotmail.com',2000)})" title="Click to copy">ezprec@hotmail.com</span>
+        <span class="contact-address">Macdonald Realty #100-2429 159 St, Surrey BC V4P 1N4</span>
+      </div>
+
+      <div class="contact-right">
+        <form class="contact-form" action="https://formspree.io/f/maqzoebn" method="POST" onsubmit="submitForm(event)">
+          <input type="text"  name="name"    placeholder="Your Name"         data-i18n-placeholder="contact-ph-name"  required />
+          <input type="email" name="email"   placeholder="your@email.com"    data-i18n-placeholder="contact-ph-email" required />
+          <input type="tel"   name="phone"   placeholder="Your Phone Number" data-i18n-placeholder="contact-ph-phone" />
+          <textarea           name="message" placeholder="Ask any question you have." data-i18n-placeholder="contact-ph-msg" rows="5"></textarea>
+          <div class="form-footer">
+            <div class="form-success" id="formSuccess" data-i18n="form-success">
+              Thank you! We'll be in touch shortly.
+            </div>
+            <button type="submit" class="send-btn" data-i18n="send-btn">SEND MESSAGE</button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════
+       FOOTER
+  ════════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer-inner">
+
+      <a href="#home" class="nav-logo footer-logo-link">
+        <svg class="logo-svg ez-badge" viewBox="0 0 220 175" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="220" height="175" fill="#231f1a"/>
+          <rect x="8" y="8" width="204" height="159" stroke="#6b5f54" stroke-width="0.8" fill="none"/>
+          <line x1="72" y1="42" x2="72"  y2="112" stroke="white" stroke-width="1.4"/>
+          <line x1="72" y1="42" x2="112" y2="42"  stroke="white" stroke-width="1.4"/>
+          <line x1="72" y1="77" x2="107" y2="77"  stroke="white" stroke-width="1.4"/>
+          <line x1="72" y1="112" x2="112" y2="112" stroke="white" stroke-width="1.4"/>
+          <line x1="97"  y1="42" x2="152" y2="42"  stroke="white" stroke-width="1.4"/>
+          <line x1="152" y1="42" x2="92"  y2="112" stroke="white" stroke-width="1.4"/>
+          <line x1="88"  y1="112" x2="152" y2="112" stroke="white" stroke-width="1.4"/>
+          <line x1="44" y1="130" x2="176" y2="130" stroke="#6b5f54" stroke-width="0.8"/>
+          <text x="110" y="150" text-anchor="middle" font-family="'Playfair Display', Georgia, serif" font-size="10" letter-spacing="4" fill="white">ELAINE ZHOU PREC*</text>
+        </svg>
+      </a>
+
+      <div class="footer-logos">
+        <img src="macdonald.svg" alt="Macdonald Realty" class="footer-macdonald" />
+        <img src="realtor.png" alt="Realtor" class="footer-realtor" />
+      </div>
+
+      <ul class="footer-nav">
+        <li><a href="#home" data-i18n="footer-home">Home</a></li>
+        <li><a href="#about" data-i18n="footer-about">About Me</a></li>
+        <li><a href="listings.html" data-i18n="footer-listings">Active Luxury Listings</a></li>
+        <li><a href="#contact" data-i18n="footer-contact">Contact</a></li>
+      </ul>
+
+      <div class="footer-social">
+        <a href="https://www.instagram.com/elainezhouprec/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      </div>
+
+      <p class="footer-copy" data-i18n="footer-copy">&copy; 2026 Elaine Zhou PREC* · All Rights Reserved</p>
+      <p class="footer-legal">Elaine Zhou PREC* is an independently owned and operated broker member of MACDONALD REALTY LTD. This is not an offer for sale. Not intended to induce breach of an existing agency agreement. 2026 Elaine Zhou PREC*, All Rights Reserved. Contents of this website, including the photography &amp; videos, may not be used without written consent from Elaine Zhou PREC*. Maximum effort is put towards the details but cannot guarantee, buyer to verify all details.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="translations.js"></script>
+  <script src="script.js"></script>
+  <script>
+  // ════════════════════════════════════════════════
+  //  MARKET DATA — update these numbers each month
+  //  Source: rebgv.org · stats released ~2nd week
+  // ════════════════════════════════════════════════
+  const CHART_DATA = {
+    // Label shown in source line at bottom
+    reportMonth: 'May 2026',
+
+    // Line chart: detached benchmark price ($M) — add newest month to end, remove oldest from front
+    lineLabels: ['Jan 25','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec','Jan 26','Feb','Mar','Apr','May'],
+    lineData:   [1.99, 2.01, 2.04, 2.02, 1.98, 1.96, 1.93, 1.91, 1.90, 1.89, 1.88, 1.87, 1.86, 1.85, 1.85, 1.86, 1.85],
+
+    // Bar chart: benchmark prices by type — [Detached, Townhouse, Apartment]
+    barPrevLabel: 'May 2025',
+    barCurrLabel: 'May 2026',
+    barPrev: [1.985, 1.104, 0.757],
+    barCurr: [1.848, 1.048, 0.698],
+
+    // Stat pills
+    benchmarkDetached: '$1,848,000',
+    activeListings:    '14,802',
+  };
+  // ════════════════════════════════════════════════
+
+  // Inject stat pill values
+  document.querySelectorAll('.stat-value').forEach((el, i) => {
+    if (i === 0) el.textContent = CHART_DATA.benchmarkDetached;
+    if (i === 1) el.textContent = CHART_DATA.activeListings;
+  });
+
+  // Update source line
+  const srcEl = document.querySelector('.insights-source');
+  if (srcEl) srcEl.innerHTML = `Source: Real Estate Board of Greater Vancouver (REBGV) &nbsp;·&nbsp; ${CHART_DATA.reportMonth}`;
+
+  // ── Market Charts ──
+  const cream   = '#f2ede4';
+  const brown   = '#8b7355';
+  const brown2  = '#c4b5a0';
+  const dark    = '#1c1a17';
+  const grid    = 'rgba(196,181,160,0.18)';
+
+  Chart.defaults.color = cream;
+  Chart.defaults.font.family = "'Montserrat', sans-serif";
+  Chart.defaults.font.size   = 11;
+
+  // ── Clip plugin: line draws left → right ──
+  const clipLeftPlugin = {
+    id: 'clipLeft',
+    beforeDraw(chart) {
+      if (chart._clipProg == null) return;
+      const { ctx, chartArea: { left, right } } = chart;
+      ctx.save();
+      ctx.beginPath();
+      ctx.rect(0, 0, left + (right - left) * chart._clipProg, chart.height);
+      ctx.clip();
+    },
+    afterDraw(chart) {
+      if (chart._clipProg != null) chart.ctx.restore();
+    }
+  };
+
+  function easeInOutQuart(t) {
+    return t < 0.5 ? 8*t*t*t*t : 1 - 8*(--t)*t*t*t;
+  }
+
+  function makeLineChart() {
+    const chart = new Chart(document.getElementById('lineChart'), {
+      type: 'line',
+      plugins: [clipLeftPlugin],
+      data: {
+        labels: CHART_DATA.lineLabels,
+        datasets: [{
+          label: 'Benchmark Price ($M)',
+          data: CHART_DATA.lineData,
+          borderColor: brown,
+          backgroundColor: 'rgba(139,115,85,0.12)',
+          borderWidth: 2,
+          pointRadius: 3,
+          pointBackgroundColor: brown,
+          fill: true,
+          tension: 0.4
+        }]
+      },
+      options: {
+        animation: false,
+        responsive: true,
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            backgroundColor: dark,
+            titleColor: cream,
+            bodyColor: brown2,
+            callbacks: { label: ctx => ' $' + ctx.parsed.y.toFixed(2) + 'M' }
+          }
+        },
+        scales: {
+          x: { grid: { color: grid }, ticks: { color: brown2 } },
+          y: {
+            grid: { color: grid },
+            ticks: { color: brown2, callback: v => '$' + v + 'M' },
+            min: 1.75, max: 2.10
+          }
+        }
+      }
+    });
+
+    // Animate clip left → right over 2s
+    chart._clipProg = 0;
+    const dur = 2000;
+    let start = null;
+    function tick(ts) {
+      if (!start) start = ts;
+      const raw = Math.min((ts - start) / dur, 1);
+      chart._clipProg = easeInOutQuart(raw);
+      chart.draw();
+      if (raw < 1) requestAnimationFrame(tick);
+      else chart._clipProg = null;
+    }
+    requestAnimationFrame(tick);
+  }
+
+  function makeBarChart() {
+    const chart = new Chart(document.getElementById('barChart'), {
+      type: 'bar',
+      plugins: [clipLeftPlugin],
+      data: {
+        labels: ['Detached', 'Townhouse', 'Apartment'],
+        datasets: [
+          {
+            label: CHART_DATA.barPrevLabel,
+            data: CHART_DATA.barPrev,
+            backgroundColor: 'rgba(139,115,85,0.45)',
+            borderColor: brown,
+            borderWidth: 1,
+            borderRadius: 3
+          },
+          {
+            label: CHART_DATA.barCurrLabel,
+            data: CHART_DATA.barCurr,
+            backgroundColor: 'rgba(196,181,160,0.55)',
+            borderColor: brown2,
+            borderWidth: 1,
+            borderRadius: 3
+          }
+        ]
+      },
+      options: {
+        animation: false,
+        responsive: true,
+        plugins: {
+          legend: {
+            display: true,
+            labels: { color: brown2, boxWidth: 12, padding: 16 }
+          },
+          tooltip: {
+            backgroundColor: dark,
+            titleColor: cream,
+            bodyColor: brown2,
+            callbacks: { label: ctx => ' $' + ctx.parsed.y.toFixed(3) + 'M' }
+          }
+        },
+        scales: {
+          x: { grid: { color: grid }, ticks: { color: brown2 } },
+          y: { grid: { color: grid }, ticks: { color: brown2 } }
+        }
+      }
+    });
+
+    chart._clipProg = 0;
+    const dur = 2000;
+    let start = null;
+    function tick(ts) {
+      if (!start) start = ts;
+      const raw = Math.min((ts - start) / dur, 1);
+      chart._clipProg = easeInOutQuart(raw);
+      chart.draw();
+      if (raw < 1) requestAnimationFrame(tick);
+      else chart._clipProg = null;
+    }
+    requestAnimationFrame(tick);
+  }
+
+  // Trigger both only when insights section scrolls into view
+  let chartsLoaded = false;
+  const insightsSection = document.getElementById('insights');
+  const chartObserver = new IntersectionObserver(entries => {
+    if (entries[0].isIntersecting && !chartsLoaded) {
+      chartsLoaded = true;
+      makeLineChart();
+      makeBarChart();
+    }
+  }, { threshold: 0.2 });
+  if (insightsSection) chartObserver.observe(insightsSection);
+  else { makeLineChart(); makeBarChart(); }
+  </script>
+</body>
+</html>
