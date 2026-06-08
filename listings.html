@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Active Luxury Listings · Elaine Zhou PREC*</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="listings.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body class="listings-page">
+
+  <!-- NAVBAR -->
+  <nav class="navbar solid" id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <svg class="logo-svg ez-badge" viewBox="0 0 220 175" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="220" height="175" fill="#231f1a"/>
+          <rect x="8" y="8" width="204" height="159" stroke="#6b5f54" stroke-width="0.8" fill="none"/>
+          <line x1="72" y1="42" x2="72"  y2="112" stroke="white" stroke-width="1.4"/>
+          <line x1="72" y1="42" x2="112" y2="42"  stroke="white" stroke-width="1.4"/>
+          <line x1="72" y1="77" x2="107" y2="77"  stroke="white" stroke-width="1.4"/>
+          <line x1="72" y1="112" x2="112" y2="112" stroke="white" stroke-width="1.4"/>
+          <line x1="97"  y1="42" x2="152" y2="42"  stroke="white" stroke-width="1.4"/>
+          <line x1="152" y1="42" x2="92"  y2="112" stroke="white" stroke-width="1.4"/>
+          <line x1="88"  y1="112" x2="152" y2="112" stroke="white" stroke-width="1.4"/>
+          <line x1="44" y1="130" x2="176" y2="130" stroke="#6b5f54" stroke-width="0.8"/>
+          <text x="110" y="150" text-anchor="middle" font-family="'Playfair Display', Georgia, serif" font-size="10" letter-spacing="4" fill="white">ELAINE ZHOU PREC*</text>
+        </svg>
+      </a>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html">HOME</a></li>
+        <li class="has-drop">
+          <a href="listings.html">LISTINGS <i class="fa-solid fa-chevron-down"></i></a>
+          <ul class="drop">
+            <li><a href="listings.html">Active Luxury Listings</a></li>
+            <li><a href="sold.html">Sold Luxury Listings</a></li>
+          </ul>
+        </li>
+        <li><a href="index.html#contact">CONTACT</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="lang-toggle" id="langToggle">中文</button>
+        <button class="burger" id="burger" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <div class="listings-hero">
+    <h1 class="listings-hero-title">Active Luxury<br><em>Listings</em></h1>
+    <p class="listings-hero-sub">Greater Vancouver &amp; Fraser Valley</p>
+  </div>
+
+  <!-- FILTER BAR -->
+  <div class="listings-toolbar">
+    <span class="listings-count">Showing <strong id="countNum">40</strong> properties</span>
+    <div class="listings-sort">
+      <span class="sort-label">Sort by</span>
+      <button class="sort-btn active" data-sort="high">Price — High to Low</button>
+      <button class="sort-btn" data-sort="low">Price — Low to High</button>
+
+    </div>
+  </div>
+
+  <!-- LISTINGS GRID -->
+  <main class="listings-grid-wrap">
+    <div class="listings-grid" id="listingsGrid"></div>
+
+    <!-- Pagination -->
+    <div class="listings-pagination" id="pagination"></div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <a href="index.html" class="nav-logo footer-logo-link">
+        <svg class="logo-svg ez-badge" viewBox="0 0 220 175" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="220" height="175" fill="#231f1a"/>
+          <rect x="8" y="8" width="204" height="159" stroke="#6b5f54" stroke-width="0.8" fill="none"/>
+          <line x1="72" y1="42" x2="72"  y2="112" stroke="white" stroke-width="1.4"/>
+          <line x1="72" y1="42" x2="112" y2="42"  stroke="white" stroke-width="1.4"/>
+          <line x1="72" y1="77" x2="107" y2="77"  stroke="white" stroke-width="1.4"/>
+          <line x1="72" y1="112" x2="112" y2="112" stroke="white" stroke-width="1.4"/>
+          <line x1="97"  y1="42" x2="152" y2="42"  stroke="white" stroke-width="1.4"/>
+          <line x1="152" y1="42" x2="92"  y2="112" stroke="white" stroke-width="1.4"/>
+          <line x1="88"  y1="112" x2="152" y2="112" stroke="white" stroke-width="1.4"/>
+          <line x1="44" y1="130" x2="176" y2="130" stroke="#6b5f54" stroke-width="0.8"/>
+          <text x="110" y="150" text-anchor="middle" font-family="'Playfair Display', Georgia, serif" font-size="10" letter-spacing="4" fill="white">ELAINE ZHOU PREC*</text>
+        </svg>
+      </a>
+      <ul class="footer-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#about">About Me</a></li>
+        <li><a href="listings.html">Active Luxury Listings</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" aria-label="WeChat"><i class="fab fa-weixin"></i></a>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2026 Elaine Zhou PREC* &nbsp;·&nbsp; All Rights Reserved</p>
+        <p class="footer-disclaimer">The trademarks MLS®, Multiple Listing Service® and associated logos are owned by The Canadian Real Estate Association (CREA).</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="listings-data.js"></script>
+  <script src="script.js"></script>
+  <script>
+  // Placeholder colours for listings without local photos
+  const placeholderColors = [
+    '#2c2825','#3a3330','#1c1a17','#2a2420','#35302b',
+    '#1e1b18','#312c28','#262220','#3d3832','#232018'
+  ];
+
+  const PER_PAGE = 12;
+  let currentPage = 1;
+  let sorted = [...LISTINGS];
+
+  function imgFor(listing) {
+    if (listing.img) return `<img src="${listing.img}" alt="${listing.address}" class="lcard-img" loading="lazy" />`;
+    const col = placeholderColors[listing.id % placeholderColors.length];
+    return `<div class="lcard-img lcard-img-placeholder" style="background:${col};">
+              <div class="placeholder-label">${listing.address.split(' ').slice(0,2).join('<br>')}</div>
+            </div>`;
+  }
+
+  function renderGrid() {
+    const grid = document.getElementById('listingsGrid');
+    const start = (currentPage - 1) * PER_PAGE;
+    const page  = sorted.slice(start, start + PER_PAGE);
+
+    grid.innerHTML = page.map(l => `
+      <div class="lcard">
+        <div class="lcard-img-wrap">
+          ${imgFor(l)}
+          ${l.tags.length ? `<div class="lcard-tags">${l.tags.map(t=>`<span class="lcard-tag">${t}</span>`).join('')}</div>` : ''}
+        </div>
+        <div class="lcard-info">
+          <div class="lcard-price">${l.price}</div>
+          <div class="lcard-address">${l.address}</div>
+          <div class="lcard-area">${l.area}</div>
+          <div class="lcard-details">
+            <span><i class="fa-solid fa-bed"></i> ${l.beds}</span>
+            <span><i class="fa-solid fa-bath"></i> ${l.baths}</span>
+            <span><i class="fa-solid fa-ruler-combined"></i> ${l.sqft.toLocaleString()} sqft</span>
+          </div>
+        </div>
+      </div>
+    `).join('');
+
+    renderPagination();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function renderPagination() {
+    const total = Math.ceil(sorted.length / PER_PAGE);
+    const pg = document.getElementById('pagination');
+    let html = '';
+    if (currentPage > 1) html += `<button class="page-btn" onclick="goPage(${currentPage-1})"><i class="fa-solid fa-chevron-left"></i></button>`;
+    for (let i = 1; i <= total; i++) {
+      html += `<button class="page-btn ${i===currentPage?'active':''}" onclick="goPage(${i})">${i}</button>`;
+    }
+    if (currentPage < total) html += `<button class="page-btn" onclick="goPage(${currentPage+1})"><i class="fa-solid fa-chevron-right"></i></button>`;
+    pg.innerHTML = html;
+  }
+
+  function goPage(n) { currentPage = n; renderGrid(); }
+
+  // Sort
+  document.querySelectorAll('.sort-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+      document.querySelectorAll('.sort-btn').forEach(b => b.classList.remove('active'));
+      this.classList.add('active');
+      const s = this.dataset.sort;
+      if (s === 'high') sorted = [...LISTINGS].sort((a,b) => parsePrice(b.price) - parsePrice(a.price));
+      else if (s === 'low') sorted = [...LISTINGS].sort((a,b) => parsePrice(a.price) - parsePrice(b.price));
+      else sorted = [...LISTINGS];
+      currentPage = 1;
+      renderGrid();
+    });
+  });
+
+  function parsePrice(p) {
+    if (!p || p === 'Upon Request') return 0;
+    return parseFloat(p.replace(/[$,]/g,'')) || 0;
+  }
+
+  // Initial render (sorted high→low by default)
+  sorted = [...LISTINGS].sort((a,b) => parsePrice(b.price) - parsePrice(a.price));
+  renderGrid();
+  </script>
+</body>
+</html>
