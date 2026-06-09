@@ -1103,9 +1103,3 @@ ul   { list-style: none; }
   .marketing-content { padding-left: 28px; }
 }
 
-@media (max-width: 1024px) {
-  .hero-video { display: none; }
-  .about-bg-video { display: none; }
-  .hero-bg { background: url('brown.jpg') center center / cover no-repeat; }
-  .about { background: url('brown.jpg') center center / cover no-repeat; }
-}
