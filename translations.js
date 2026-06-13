@@ -42,7 +42,7 @@ const TRANSLATIONS = {
     'stat-label-2': 'Active Listings',
     'stat-label-3': 'Sales-to-Active Ratio',
     'chart-title-1': 'Benchmark Price — Detached Homes',
-    'chart-sub-1': 'Greater Vancouver · Jan 2025 – May 2026 ($ Millions)',
+    'chart-sub-1': 'Greater Vancouver · Jan 2025 – May 2026 (CAD $ Millions)',
     'chart-title-2': 'Benchmark Price by Property Type',
     'chart-sub-2': 'Greater Vancouver · May 2026 vs May 2025',
 
@@ -108,7 +108,7 @@ const TRANSLATIONS = {
     'stat-label-2': '在售房源',
     'stat-label-3': '销售活跃比率',
     'chart-title-1': '独立屋基准价格走势',
-    'chart-sub-1': '大温哥华 · 2025年1月 – 2026年5月（百万元）',
+    'chart-sub-1': '大温哥华 · 2025年1月 – 2026年5月（加元百万）',
     'chart-title-2': '各类型物业基准价格对比',
     'chart-sub-2': '大温哥华 · 2026年5月 对比 2025年5月',
 
