@@ -56,6 +56,19 @@ const TRANSLATIONS = {
     'send-btn': 'SEND MESSAGE',
     'form-success': 'Thank you! We\'ll be in touch shortly.',
 
+    // Listings page
+    'listings-hero-title': 'Active Luxury<br><em>Listings</em>',
+    'listings-hero-sub': 'Greater Vancouver & Fraser Valley',
+    'listings-showing': 'Showing',
+    'listings-properties': 'properties',
+    'listings-sort-by': 'Sort by',
+    'listings-high': 'Price — High to Low',
+    'listings-low': 'Price — Low to High',
+    'sold-hero-title': 'Sold Luxury<br><em>Listings</em>',
+    'sold-hero-sub': 'Greater Vancouver & Fraser Valley · Over $3 Billion Listed & Sold',
+    'sold-showing': 'Showing',
+    'sold-properties': 'sold properties',
+
     // Footer
     'footer-home': 'Home',
     'footer-about': 'About Me',
@@ -121,6 +134,19 @@ const TRANSLATIONS = {
     'contact-ph-msg': '请输入您的问题',
     'send-btn': '发送信息',
     'form-success': '感谢您！我们将尽快与您联系。',
+
+    // Listings page
+    'listings-hero-title': '精选豪华<br><em>在售房源</em>',
+    'listings-hero-sub': '大温哥华及菲沙河谷',
+    'listings-showing': '共显示',
+    'listings-properties': '套房源',
+    'listings-sort-by': '排序方式',
+    'listings-high': '价格 — 从高到低',
+    'listings-low': '价格 — 从低到高',
+    'sold-hero-title': '已售豪华<br><em>房源</em>',
+    'sold-hero-sub': '大温哥华及菲沙河谷 · 已成交超过 30 亿元',
+    'sold-showing': '共显示',
+    'sold-properties': '套已售房源',
 
     // Footer
     'footer-home': '首页',

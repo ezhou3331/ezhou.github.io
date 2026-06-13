@@ -18,10 +18,11 @@ document.addEventListener('click', e => {
 
 // ── Language toggle ──
 const langToggle = document.getElementById('langToggle');
-let zh = false;
+let zh = localStorage.getItem('lang') === 'zh';
 
 function applyTranslations(lang) {
   const t = TRANSLATIONS[lang];
+  if (!t) return;
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
     if (t[key] !== undefined) el.textContent = t[key];
@@ -36,8 +37,15 @@ function applyTranslations(lang) {
   });
 }
 
+// Apply saved language on load
+if (zh) {
+  langToggle.textContent = 'EN';
+  applyTranslations('zh');
+}
+
 langToggle.addEventListener('click', () => {
   zh = !zh;
+  localStorage.setItem('lang', zh ? 'zh' : 'en');
   langToggle.textContent = zh ? 'EN' : '中文';
   applyTranslations(zh ? 'zh' : 'en');
 });

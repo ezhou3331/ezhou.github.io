@@ -83,17 +83,17 @@
   <!-- PAGE HERO -->
   <div class="listings-hero">
     <span class="sold-badge">Sold Luxury Portfolio</span>
-    <h1 class="listings-hero-title">Sold Luxury<br><em>Listings</em></h1>
-    <p class="listings-hero-sub">Greater Vancouver &amp; Fraser Valley · Over $3 Billion Listed &amp; Sold</p>
+    <h1 class="listings-hero-title" data-i18n-html="sold-hero-title">Sold Luxury<br><em>Listings</em></h1>
+    <p class="listings-hero-sub" data-i18n="sold-hero-sub">Greater Vancouver &amp; Fraser Valley · Over $3 Billion Listed &amp; Sold</p>
   </div>
 
   <!-- FILTER BAR -->
   <div class="listings-toolbar">
-    <span class="listings-count">Showing <strong id="countNum">0</strong> sold properties</span>
+    <span class="listings-count"><span data-i18n="sold-showing">Showing</span> <strong id="countNum">0</strong> <span data-i18n="sold-properties">sold properties</span></span>
     <div class="listings-sort">
-      <span class="sort-label">Sort by</span>
-      <button class="sort-btn active" data-sort="high">Price — High to Low</button>
-      <button class="sort-btn" data-sort="low">Price — Low to High</button>
+      <span class="sort-label" data-i18n="listings-sort-by">Sort by</span>
+      <button class="sort-btn active" data-sort="high" data-i18n="listings-high">Price — High to Low</button>
+      <button class="sort-btn" data-sort="low" data-i18n="listings-low">Price — Low to High</button>
     </div>
   </div>
 
@@ -141,6 +141,7 @@
   </footer>
 
   <script src="sold-data.js"></script>
+  <script src="translations.js"></script>
   <script src="script.js"></script>
   <script>
   const placeholderColors = [
