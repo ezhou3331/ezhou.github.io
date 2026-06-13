@@ -21,6 +21,7 @@ const langToggle = document.getElementById('langToggle');
 let zh = localStorage.getItem('lang') === 'zh';
 
 function applyTranslations(lang) {
+  if (typeof TRANSLATIONS === 'undefined') return;
   const t = TRANSLATIONS[lang];
   if (!t) return;
   document.querySelectorAll('[data-i18n]').forEach(el => {
@@ -37,18 +38,18 @@ function applyTranslations(lang) {
   });
 }
 
-// Apply saved language on load
-if (zh) {
-  langToggle.textContent = 'EN';
-  applyTranslations('zh');
+if (langToggle) {
+  if (zh) {
+    langToggle.textContent = 'EN';
+    applyTranslations('zh');
+  }
+  langToggle.addEventListener('click', () => {
+    zh = !zh;
+    localStorage.setItem('lang', zh ? 'zh' : 'en');
+    langToggle.textContent = zh ? 'EN' : '中文';
+    applyTranslations(zh ? 'zh' : 'en');
+  });
 }
-
-langToggle.addEventListener('click', () => {
-  zh = !zh;
-  localStorage.setItem('lang', zh ? 'zh' : 'en');
-  langToggle.textContent = zh ? 'EN' : '中文';
-  applyTranslations(zh ? 'zh' : 'en');
-});
 
 // ── Contact form ──
 function submitForm(e) {
