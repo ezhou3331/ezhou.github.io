@@ -9,7 +9,7 @@ const TRANSLATIONS = {
 
     // Medallion
     'med-over': '',
-    'med-label': 'LOCAL REAL ESTATE EXPERT',
+    'med-label': 'LUXURY<br>REAL ESTATE<br>EXPERT',
 
     // CTA
     'cta-name': 'ELAINE ZHOU',
