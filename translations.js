@@ -8,8 +8,8 @@ const TRANSLATIONS = {
     'nav-contact': 'CONTACT',
 
     // Medallion
-    'med-over': 'OVER',
-    'med-label': 'LISTED & SOLD',
+    'med-over': '',
+    'med-label': 'LOCAL REAL ESTATE EXPERT',
 
     // CTA
     'cta-name': 'ELAINE ZHOU',
@@ -87,8 +87,8 @@ const TRANSLATIONS = {
     'nav-contact': '联系我们',
 
     // Medallion
-    'med-over': '超过',
-    'med-label': '已上市及成交',
+    'med-over': '',
+    'med-label': '本地房地产专家',
 
     // CTA
     'cta-name': 'ELAINE ZHOU',

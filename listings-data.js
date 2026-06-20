@@ -598,5 +598,20 @@ const LISTINGS = [
     basement: "Full, Finished", storeys: 2, yearBuilt: 2017, style: "Country Estate",
     pricePerSqft: "N/A",
     description: "An extraordinary 5-acre country estate in prestigious Campbell Valley, Langley. This magnificent property offers the ultimate rural luxury lifestyle — a grand custom home, equestrian facilities, expansive grounds, and complete privacy just minutes from urban amenities."
+  },
+  {
+    id: 41,
+    address: "13289 12B Avenue",
+    area: "Crescent Bch Ocean Pk., South Surrey White Rock",
+    price: "$3,688,000",
+    sqft: 3509,
+    tags: ["OCEAN VIEW", "OPEN HOUSE JUN 20"],
+    img: "https://dyhx7is8pu014.cloudfront.net/www.team-mcknight.com/homes/1074523/web/13289-12b-avenue-crescent-bch-ocean-pk-south-surrey-white-rock-01.jpg",
+    beds: 5, baths: 4, fullBaths: 3, halfBaths: 1,
+    mls: "R2987523", type: "House", lotSize: "N/A", frontage: "N/A",
+    taxes: "Upon Request", parking: "Garage Double", view: "Ocean view",
+    basement: "Full, Finished", storeys: 2, yearBuilt: 2018, style: "Contemporary",
+    pricePerSqft: "$746",
+    description: "A stunning ocean view home in the sought-after Crescent Beach/Ocean Park community of South Surrey. This beautifully crafted residence offers panoramic views, an open-concept living space, gourmet kitchen, and resort-style outdoor entertaining areas — all just minutes from the beach."
   }
 ];
