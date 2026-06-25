@@ -24,7 +24,7 @@ const TRANSLATIONS = {
     // About
     'about-heading': 'ABOUT<br>ME',
     'about-name': 'ELAINE ZHOU PREC*',
-    'about-banner': 'OVER $3-BILLION LISTED & SOLD',
+    'about-banner': 'LUXURY REAL ESTATE EXPERT',
     'about-p1': 'Elaine Zhou is a seasoned real estate professional with over a decade of experience in the real estate industry, complemented by an extensive background in international finance. Her unique combination of financial expertise, global perspective, and deep understanding of real estate markets allows her to provide clients with strategic insights that go far beyond a traditional property transaction.',
     'about-p2': 'Having worked with high-net-worth individuals and international investors throughout her career, Elaine has developed a strong network of affluent clients and industry professionals across North America and Asia. Her international outlook, combined with a keen eye for identifying opportunities and emerging market trends, enables her to help clients make informed decisions that align with both their lifestyle and long-term wealth-building objectives.',
     'about-p3': 'Specializing in luxury homes, investment properties, and cross-border real estate transactions, Elaine is particularly skilled at serving local and international clients, investors, and families relocating to Canada. She understands the unique financial, cultural, and cross-border considerations involved in real estate transactions and is committed to making every experience seamless, efficient, and successful.',
