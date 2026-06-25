@@ -642,5 +642,17 @@
   if (insightsSection) chartObserver.observe(insightsSection);
   else { makeLineChart(); makeBarChart(); }
   </script>
+  <script>
+  // Force autoplay on iOS/Instagram browser
+  document.querySelectorAll('video').forEach(v => {
+    v.muted = true;
+    v.play().catch(() => {});
+  });
+  document.addEventListener('touchstart', () => {
+    document.querySelectorAll('video').forEach(v => {
+      if (v.paused) v.play().catch(() => {});
+    });
+  }, { once: true });
+  </script>
 </body>
 </html>
