@@ -101,4 +101,8 @@ const SOLD_LISTINGS = [
   { id:'s98', address:'15340 Columbia Avenue',        area:'White Rock',                 price:3198000,  sqft:3810,  tags:[],            img:CDN+'392355/web/15340-columbia-avenue-white-rock-south-surrey-white-rock-01.jpg?timestamp=1681839931' },
   { id:'s99', address:'6640 Kempson Crescent',        area:'Sunshine Hills Woods, Delta',price:3198000,  sqft:5192,  tags:[],            img:CDN+'312353/web/6640-kempson-crescent-sunshine-hills-woods-n-delta-01.jpg?timestamp=1641418509' },
   { id:'s100',address:'14458 30A Avenue',             area:'Elgin Chantrell',            price:3190000,  sqft:6622,  tags:[],            img:CDN+'920277/web/14458-30a-avenue-elgin-chantrell-south-surrey-white-rock-01.jpg?timestamp=1728400706' },
+  { id:'s101',address:'2869 138 Street',              area:'Elgin Chantrell, South Surrey', price:2998000, sqft:0,   tags:[],            img:'2869-138-street-elgin-chantrell-south-surrey-white-rock-01.jpg' },
+  { id:'s102',address:'1908 Ocean Wind Drive',        area:'Crescent Bch Ocean Pk., South Surrey', price:1750000, sqft:0, tags:[],       img:'1908-ocean-wind-drive-crescent-bch-ocean-pk-south-surrey-white-rock-01.jpg' },
+  { id:'s103',address:'17105 0 Avenue',               area:'Pacific Douglas, South Surrey', price:1837000, sqft:0,  tags:[],            img:'17105-0-avenue-pacific-douglas-south-surrey-white-rock-01.jpg' },
+  { id:'s104',address:'3311 155B Street',             area:'Morgan Creek, South Surrey',  price:1838000,  sqft:0,   tags:[],            img:'3311-155b-street-morgan-creek-south-surrey-white-rock-01.jpg' },
 ];
