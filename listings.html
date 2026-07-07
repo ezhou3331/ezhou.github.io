@@ -62,9 +62,10 @@
     <span class="listings-count"><span data-i18n="listings-showing">Showing</span> <strong id="countNum">40</strong> <span data-i18n="listings-properties">properties</span></span>
     <div class="listings-sort">
       <span class="sort-label" data-i18n="listings-sort-by">Sort by</span>
-      <button class="sort-btn active" data-sort="high" data-i18n="listings-high">Price — High to Low</button>
+      <button class="sort-btn" data-sort="high" data-i18n="listings-high">Price — High to Low</button>
       <button class="sort-btn" data-sort="low" data-i18n="listings-low">Price — Low to High</button>
-
+      <button class="sort-btn active" data-sort="newest" data-i18n="listings-newest">Latest</button>
+      <button class="sort-btn" data-sort="oldest" data-i18n="listings-oldest">Oldest</button>
     </div>
   </div>
 
@@ -185,6 +186,8 @@
       const s = this.dataset.sort;
       if (s === 'high') sorted = [...LISTINGS].sort((a,b) => parsePrice(b.price) - parsePrice(a.price));
       else if (s === 'low') sorted = [...LISTINGS].sort((a,b) => parsePrice(a.price) - parsePrice(b.price));
+      else if (s === 'newest') sorted = [...LISTINGS].sort((a,b) => b.id - a.id);
+      else if (s === 'oldest') sorted = [...LISTINGS].sort((a,b) => a.id - b.id);
       else sorted = [...LISTINGS];
       currentPage = 1;
       renderGrid();
@@ -196,8 +199,8 @@
     return parseFloat(p.replace(/[$,]/g,'')) || 0;
   }
 
-  // Initial render (sorted high→low by default)
-  sorted = [...LISTINGS].sort((a,b) => parsePrice(b.price) - parsePrice(a.price));
+  // Initial render (sorted newest first by default)
+  sorted = [...LISTINGS].sort((a,b) => b.id - a.id);
   renderGrid();
   </script>
 </body>

@@ -92,8 +92,10 @@
     <span class="listings-count"><span data-i18n="sold-showing">Showing</span> <strong id="countNum">0</strong> <span data-i18n="sold-properties">sold properties</span></span>
     <div class="listings-sort">
       <span class="sort-label" data-i18n="listings-sort-by">Sort by</span>
-      <button class="sort-btn active" data-sort="high" data-i18n="listings-high">Price — High to Low</button>
+      <button class="sort-btn" data-sort="high" data-i18n="listings-high">Price — High to Low</button>
       <button class="sort-btn" data-sort="low" data-i18n="listings-low">Price — Low to High</button>
+      <button class="sort-btn active" data-sort="newest" data-i18n="listings-newest">Latest</button>
+      <button class="sort-btn" data-sort="oldest" data-i18n="listings-oldest">Oldest</button>
     </div>
   </div>
 
@@ -151,17 +153,20 @@
 
   const PER_PAGE = 12;
   let currentPage = 1;
+  function idNum(id) { return parseInt(String(id).replace('s','')) || 0; }
   function sortFn(dir) {
-    return dir === 'high'
-      ? (a,b) => (b.price||0) - (a.price||0)
-      : (a,b) => {
-          if (!a.price && !b.price) return 0;
-          if (!a.price) return 1;
-          if (!b.price) return -1;
-          return a.price - b.price;
-        };
+    if (dir === 'high') return (a,b) => (b.price||0) - (a.price||0);
+    if (dir === 'low') return (a,b) => {
+      if (!a.price && !b.price) return 0;
+      if (!a.price) return 1;
+      if (!b.price) return -1;
+      return a.price - b.price;
+    };
+    if (dir === 'newest') return (a,b) => idNum(b.id) - idNum(a.id);
+    if (dir === 'oldest') return (a,b) => idNum(a.id) - idNum(b.id);
+    return () => 0;
   }
-  let sorted = [...SOLD_LISTINGS].sort(sortFn('high'));
+  let sorted = [...SOLD_LISTINGS].sort(sortFn('newest'));
 
   document.getElementById('countNum').textContent = SOLD_LISTINGS.length;
   // Update sort default to match source page (already price high→low)
