@@ -613,5 +613,35 @@ const LISTINGS = [
     basement: "Full, Finished", storeys: 2, yearBuilt: 2018, style: "Contemporary",
     pricePerSqft: "$746",
     description: "A stunning ocean view home in the sought-after Crescent Beach/Ocean Park community of South Surrey. This beautifully crafted residence offers panoramic views, an open-concept living space, gourmet kitchen, and resort-style outdoor entertaining areas — all just minutes from the beach."
+  },
+  {
+    id: 42,
+    address: "2289 131A Street",
+    area: "South Surrey White Rock",
+    price: "$2,338,000",
+    sqft: 0,
+    tags: [],
+    img: "2899.png",
+    beds: 4, baths: 3, fullBaths: 3, halfBaths: 0,
+    mls: "", type: "House", lotSize: "N/A", frontage: "N/A",
+    taxes: "Upon Request", parking: "Garage Double", view: "",
+    basement: "Full, Finished", storeys: 2, yearBuilt: 0, style: "Contemporary",
+    pricePerSqft: "",
+    description: "A beautifully appointed home in the prestigious South Surrey community. Features an elegant open-concept layout, high-end finishes throughout, and a private backyard — ideally located close to top schools, parks, and shopping."
+  },
+  {
+    id: 43,
+    address: "15460 36A Avenue",
+    area: "South Surrey White Rock",
+    price: "$1,889,000",
+    sqft: 0,
+    tags: [],
+    img: "15460.png",
+    beds: 4, baths: 3, fullBaths: 3, halfBaths: 0,
+    mls: "", type: "House", lotSize: "N/A", frontage: "N/A",
+    taxes: "Upon Request", parking: "Garage Double", view: "",
+    basement: "Full, Finished", storeys: 2, yearBuilt: 0, style: "Contemporary",
+    pricePerSqft: "",
+    description: "A stunning property in South Surrey offering a perfect blend of comfort and luxury. Spacious interiors, quality craftsmanship, and a prime location close to amenities, parks, and top-rated schools."
   }
 ];
